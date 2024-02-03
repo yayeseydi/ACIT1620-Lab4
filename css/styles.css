@@ -1,0 +1,40 @@
+:root {
+    --base-color: 300, 50%;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid hsl(var(--base-color), 90%);    
+}
+
+th,
+td {
+    padding: 1rem;
+    border: 1px solid hsl(var(--base-color), 90%);
+    color: hsl(120, 100%, 10%);
+}
+
+th {
+    text-align: left;
+    text-transform: uppercase;
+    font-weight:900;
+}
+
+tr:nth-child(odd):not(:nth-child(1)) {
+    background: hsl(var(--base-color), 80%);
+}
+
+tr:nth-child(even){
+    background: hsl(var(--base-color), 90%);
+}
+
+tr:first-child {
+    background: hsl(var(--base-color), 60%);
+    /* color: hsl(200, 100%, 50%); */
+}
+
+tr:nth-child(5n) {
+    background: hsl(var(--base-color), 50%);
+}

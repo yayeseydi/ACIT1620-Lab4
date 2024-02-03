@@ -1,0 +1,50 @@
+.wrapper {
+    border: 1px solid;
+    border-radius: 5px;
+    display: flex;
+    gap: 20px;
+    padding: 80px 1rem 1rem;
+}
+
+.wrapper > div {
+    width: 200px;
+    height: 150px;
+    transform: scale(1.2);
+    position: relative;
+    transition: left 1s, transform 1s, box-shadow 2s ease;
+}
+
+.wrapper > div:first-child {
+    background: mediumseagreen;
+}
+
+.wrapper > div:nth-child(2) {
+    background: orchid;
+    left: calc(220px * -1);
+}
+
+.wrapper > div:nth-child(3) {
+    background: mediumvioletred;
+    left: -440px;
+}
+
+.wrapper > div:nth-child(4) {
+    background: salmon;
+    left: -660px;
+}
+
+.wrapper > div:nth-child(5) {
+    background: chartreuse;
+    left: -880px;
+    box-shadow: 10px -10px 0 salmon,
+    20px -20px 0 mediumvioletred,
+    30px -30px 0 orchid,
+    40px -40px 0 mediumseagreen;
+}
+
+.wrapper:hover > div {
+    left: 0;
+    transform: scale(1);
+    box-shadow: none;
+    transition: left 2s, transform 2s, box-shadow 1s ease;
+}
