@@ -1,40 +1,77 @@
 :root {
-    --base-color: 300, 50%;
+    --base-color: #183856; /* Blue */
+    --header-text-color: #fff; /* White */
+    --nav-text-color: #ebedf0; /* Darker shade for navigation text */
+    --nav-hover-scale: 1.1;
+    --nav-shadow-size: 2px;
+    --content-heading-color: #fff; /* Darker shade for section headings */
+    --content-paragraph-color: #fff; /* Even darker shade for section paragraphs */
 }
 
-table {
-    table-layout: fixed;
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid hsl(var(--base-color), 90%);    
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-th,
-td {
-    padding: 1rem;
-    border: 1px solid hsl(var(--base-color), 90%);
-    color: hsl(120, 100%, 10%);
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-th {
-    text-align: left;
-    text-transform: uppercase;
-    font-weight:900;
+header {
+    background-color: var(--base-color);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
 }
 
-tr:nth-child(odd):not(:nth-child(1)) {
-    background: hsl(var(--base-color), 80%);
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1;
+    display: flex;
 }
 
-tr:nth-child(even){
-    background: hsl(var(--base-color), 90%);
+nav ul li {
+    margin-right: 20px;
 }
 
-tr:first-child {
-    background: hsl(var(--base-color), 60%);
-    /* color: hsl(200, 100%, 50%); */
+nav ul li a {
+    text-decoration: none;
+    color: #3dc4fe; /* Darker shade of base color */
+    padding: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-tr:nth-child(5n) {
-    background: hsl(var(--base-color), 50%);
+nav ul li a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.content-section {
+    margin-top: 20px;
+    padding: 20px;
+    color: var(--content-heading-color);
+    color: #183856; /* Darker shade of base color */
+
+
+}
+
+.content-section:hover {
+    background-color:#183856; /* Lighter shade of base color */
+    color: #fff; /* Darker shade of base color */
+    transition: all 0.3s ease;
+    padding: 30px;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd; /* Lighter shade of base color */
+    padding-top: 20px;
+    color: #183856; /* Darker shade of base color */  
 }
